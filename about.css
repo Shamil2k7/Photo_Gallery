@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+button {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:#a2987f;
+    color:white;
+}
+
+nav img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+#logoDiv {
+    height: 100%;
+}
+
+#menuBtn {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-links {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    border-bottom: 1px solid black;
+    color: rgb(0, 0, 0);
+}
+
+/* Hero Section */
+.about-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1200');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Philosophy Section */
+.philosophy {
+    padding: 100px 40px;
+    background: #fff;
+}
+
+.philosophy-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.philosophy-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.philosophy-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.philosophy-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 20px 20px 0px #f0f0f0;
+}
+
+/* Stats Section */
+.stats {
+    background: #a2987f;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.stat-item p {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+/* Footer CTA */
+.about-footer {
+    padding: 100px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.about-footer h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.wrapper{
+  /* position: fixed; */
+  top: 50%;
+  left: 60%;
+  transform: traslate(-50%, -50%);
+    
+}
+
+.btn-ani{
+  display: block;
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #a2987f;
+  border: 2px solid #a2987f;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.btn-ani span{
+  position: relative;
+  z-index: 2;
+}
+
+.btn-ani:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background:#a2987f;
+  transition: all .35s;
+}
+
+.btn-ani:hover{
+  color: #fff;
+}
+
+.btn-ani:hover:after{
+  width: 100%;
+}
+
+#btn-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    background: #504b3e;
+    color: #ccc;
+    padding: 60px 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+/* LOGO */
+.logo-box img {
+    width: 140px;
+    max-width: 100%;
+}
+
+/* TEXT */
+.footer-logo {
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.footer-box h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-box p,
+.footer-box li {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 10px;
+}
+
+.footer-box a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-box a:hover {
+    color: #f9c74f;
+}
+
+/* Bottom */
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #222;
+    font-size: 13px;
+}
+
+/* TABLET */
+@media(max-width:900px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-box {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+}
+
+/* MOBILE */
+@media(max-width:500px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .logo-box img {
+        margin: auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .philosophy-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .shot-hide{
+        display: none;
+    }
+    .shot-show{
+        display: block;
+    }
+}
+@media (min-width: 768px) {
+    
+
+    
+    .shot-hide{
+        display: block;
+    }
+    .shot-show{
+        display: none;
+    }
+}
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
